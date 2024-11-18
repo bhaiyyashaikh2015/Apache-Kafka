@@ -20,43 +20,44 @@ Download Kafka: https://www.apache.org/dyn/closer.cgi?path=/kafka/3.9.0/kafka_2.
 **********************************************************************************************
 
 1. Kafka Cluster
-A Kafka cluster is a distributed system made up of multiple Kafka brokers working together.
-The cluster manages the distribution, storage, and replication of data across brokers for reliability and scalability.
-Each Kafka cluster is identified by a unique cluster ID.
+- A Kafka cluster is a distributed system made up of multiple Kafka brokers working together.
+- The cluster manages the distribution, storage, and replication of data across brokers for reliability and scalability.
+- Each Kafka cluster is identified by a unique cluster ID.
 
 2. Kafka Broker
-A Kafka broker is a server running Kafka.
-It is responsible for handling requests from producers, consumers, and managing data storage for topics.
-A broker manages partitions and ensures data replication across other brokers in the cluster.
+- A Kafka broker is a server running Kafka.
+- It is responsible for handling requests from producers, consumers, and managing data storage for topics.
+- A broker manages partitions and ensures data replication across other brokers in the cluster.
+
 3. Kafka Producer
-A Kafka producer is a client that publishes messages to Kafka topics.
-Producers can send messages to specific partitions of a topic (based on a key) or allow Kafka to distribute them evenly.
-They handle retries, batching, and compression of data before sending.
+- A Kafka producer is a client that publishes messages to Kafka topics.
+- Producers can send messages to specific partitions of a topic (based on a key) or allow Kafka to distribute them evenly.
+- They handle retries, batching, and compression of data before sending.
 
 4. Kafka Consumer
-A Kafka consumer is a client that reads messages from Kafka topics.
-Consumers subscribe to one or more topics and pull data in real-time or at their pace.
-They use offsets to keep track of where to resume after processing messages.
+- A Kafka consumer is a client that reads messages from Kafka topics.
+- Consumers subscribe to one or more topics and pull data in real-time or at their pace.
+- They use offsets to keep track of where to resume after processing messages.
 
 5. Kafka Topic
-A topic is a category or feed name where producers send records, and consumers read them.
-Topics are split into partitions for scalability.
-Kafka topics are immutable, meaning records cannot be updated after being written.
+- A topic is a category or feed name where producers send records, and consumers read them.
+- Topics are split into partitions for scalability.
+- Kafka topics are immutable, meaning records cannot be updated after being written.
 
 6. Kafka Partitions
-A partition is a division of a topic to distribute data and workload across brokers.
-Each partition is an ordered, immutable sequence of records.
-Partitions allow Kafka to scale horizontally by spreading the load over multiple brokers.
+- A partition is a division of a topic to distribute data and workload across brokers.
+- Each partition is an ordered, immutable sequence of records.
+- Partitions allow Kafka to scale horizontally by spreading the load over multiple brokers.
 
 7. Kafka Offsets
-An offset is a unique identifier for each record within a partition.
-It helps consumers track their position and ensures message delivery exactly once (or at least once).
-Consumers can manually set the offset to replay or skip messages.
+- An offset is a unique identifier for each record within a partition.
+- It helps consumers track their position and ensures message delivery exactly once (or at least once).
+- Consumers can manually set the offset to replay or skip messages.
 
 8. Kafka Consumer Group
-A consumer group is a collection of consumers working together to consume messages from a topic.
-Kafka distributes partitions among consumers in the group, ensuring no two consumers in the same group read the same partition.
-Enables parallel processing and fault tolerance.
+- A consumer group is a collection of consumers working together to consume messages from a topic.
+- Kafka distributes partitions among consumers in the group, ensuring no two consumers in the same group read the same partition.
+- Enables parallel processing and fault tolerance.
 
 These concepts together make Kafka a powerful distributed event-streaming platform.
 
